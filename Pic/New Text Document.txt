@@ -1,0 +1,33 @@
+create database Inventory;
+Query OK, 1 row affected (0.007 sec)
+
+use Inventory;
+Database changed
+
+create table Product(
+product_id varchar(30),
+product_name varchar(30),
+product_price int,
+quantity_kg_piece varchar(30));
+
+show tables;
+ Tables_in_inventory |
++---------------------+
+| product             |
++---------------------+
+
+insert into Product values("1","amulmilk",200,"5");
+insert into Product values("2","mustard oli",300,"30");
+
+select * from Product;
++------------+--------------+---------------+-------------------+
+| product_id | product_name | product_price | quantity_kg_piece |
++------------+--------------+---------------+-------------------+
+| 1          | amulmilk     |           200 | 5                 |
+| 2          | mustard oli  |           300 | 30                |
++------------+--------------+---------------+-------------------+
+2 rows in set (0.000 sec)
+
+
+alter table Product
+add quantitykg varchar(30);
